@@ -4,6 +4,7 @@
  * @flow
  */
 
+import TicTacToeApp from 'TicTacToeApp'
 import React, { Component } from 'react';
 import {
   AppRegistry,
