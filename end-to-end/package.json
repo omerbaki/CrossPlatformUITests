@@ -1,0 +1,47 @@
+{
+  "name": "end-to-end",
+  "version": "0.0.1",
+  "dependencies": {
+    "axios": "^0.12.0",
+    "babel-core": "^6.7.7",
+    "babel-eslint": "^6.0.0-beta.6",
+    "babel-plugin-flow-react-proptypes": "^0.14.0",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-plugin-transform-strict-mode": "^6.6.5",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-react-native": "^1.7.0",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "babel-register": "^6.3.13",
+    "bluebird": "^3.4.6",
+    "chai": "^3.5.0",
+    "chalk": "^1.1.3",
+    "compare-versions": "^3.0.0",
+    "minimist": "^1.2.0",
+    "mocha": "^2.4.5",
+    "mocha-junit-reporter": "^1.11.1",
+    "mocha-teamcity-reporter": "^1.0.0",
+    "moment": "^2.13.0",
+    "node-uuid": "^1.4.7",
+    "querystring": "^0.2.0",
+    "request": "^2.74.0",
+    "sync-request": "^3.0.1",
+    "wdio-junit-reporter": "^0.1.0",
+    "wdio-mocha-framework": "^0.3.4",
+    "wdio-selenium-standalone-service": "0.0.7",
+    "wdio-spec-reporter": "0.0.3",
+    "wdio-teamcity-reporter": "^1.0.2",
+    "webdriverio": "4.3.0"
+  },
+  "scripts": {
+    "appium": "./node_modules/.bin/appium",
+    "test-e2e:local-android": "wdio ./configs/wdio.local.android.conf.js",
+    "test-e2e:local-ios": "wdio ./configs/wdio.local.ios.conf.js",
+    "test-e2e:testdroid-android": "wdio ./configs/wdio.testdroid.android.conf.js",
+    "test-e2e:testdroid-ios": "wdio ./configs/wdio.testdroid.ios.conf.js"
+  },
+  "devDependencies": {
+    "appium": "1.6.3",
+    "babel-preset-es2015-node6": "^0.4.0"
+  }
+}

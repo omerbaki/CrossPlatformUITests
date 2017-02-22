@@ -140,6 +140,7 @@ class Cell extends React.Component {
             <TouchableHighlight
                 onPress={this.props.onPress}
                 underlayColor="transparent"
+                accessibilityLabel={this.props.name}
                 activeOpacity={0.5}>
                 <View style={[styles.cell, this.cellStyle()]}>
                     <Text style={[styles.cellText, this.textStyle()]}>
@@ -149,6 +150,10 @@ class Cell extends React.Component {
             </TouchableHighlight>
         );
     }
+}
+
+Cell.propTypes = {
+    name: React.PropTypes.string.isRequired,
 }
 
 class GameEndOverlay extends React.Component {
@@ -169,7 +174,7 @@ class GameEndOverlay extends React.Component {
         }
 
         return (
-            <View style={styles.overlay}>
+            <View style={styles.overlay} accessibilityLabel={message}>
                 <Text style={styles.overlayMessage}>{message}</Text>
                 <TouchableHighlight
                     onPress={this.props.onRestart}
@@ -214,6 +219,7 @@ var TicTacToeApp = React.createClass({
                 {cells.map((player, col) =>
                     <Cell
                         key={'cell' + col}
+                        name={'cell_' + row + '_' +col}
                         player={player}
                         onPress={this.handleCellPress.bind(this, row, col)}
                     />
